@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using UserStorieProject_School_prog.Repo;
+using UserStorieProject_School_prog.Records;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,16 +12,16 @@ namespace UserStorieProject_School_prog.Controllers
     {
         // GET: api/<RecordsController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Record_class>? Get()
         {
-            return new string[] { "value1", "value2" };
+            return Records_repo.Records;
         }
 
         // GET api/<RecordsController>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return 
         }
 
         // POST api/<RecordsController>
