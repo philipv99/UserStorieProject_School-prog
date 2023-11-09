@@ -10,12 +10,19 @@ namespace UserStorieProject_School_prog.Controllers
     [ApiController]
     public class RecordsController : ControllerBase
     {
-        private Records_repo _repo;
+        Records_repo _Repo;
+        public RecordsController(Records_repo records_repo)
+        {
+            _Repo = records_repo;
+        }
+        
+
         // GET: api/<RecordsController>
         [HttpGet]
-        public List<Record_class> Get()
+        [ProducesResponseType(200)]
+        public ActionResult<List<Record_class>> Get()
         {
-            return _repo.Get();
+            return Ok(_Repo.Get());
         }
 
         // GET api/<RecordsController>/5
