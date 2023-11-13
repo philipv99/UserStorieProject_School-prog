@@ -11,7 +11,7 @@ namespace UserStorieProject_School_prog.Repo
         {
             Records = new List<Record_class>() {
             new Record_class() { Title = "man", Artist = "him", Duration = 200, Id = 1, PublicationYear = 2002 },
-            new Record_class() { Title = "man", Artist = "him", Duration = 200, Id = 2, PublicationYear = 2002 }};
+            new Record_class() { Title = "woman", Artist = "her", Duration = 400, Id = 2, PublicationYear = 2003 }};
         }
 
 
